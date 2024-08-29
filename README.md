@@ -1,12 +1,16 @@
-# Kickstart Terraform
-Automate multi-cloud infrastructure provisioning parallely on AWS, Microsoft Azure, and Google Cloud Platform (GCP) using Terraform.
+# 🌐 Multi-Cloud Infrastructure Provisioning with Terraform
 
+This project automates the provisioning of infrastructure **in parallel** across **AWS**, **Microsoft Azure**, and **Google Cloud Platform (GCP)** using **Terraform**. It provides a modular, scalable, and cloud-agnostic approach for building environments across providers with consistent configuration and security standards.
 
-## Getting started
-Please refer to the [wiki](https://github.com/sloopstash/kickstart-terraform/wiki) for detailed instructions on how to get started with our Terraform starter-kit.
+---
 
+## 🚀 Overview
 
-## Get support
-- [Issues](https://github.com/sloopstash/kickstart-terraform/issues)
-- [Contact us](https://sloopstash.com/contact.html)
+Provision cloud infrastructure simultaneously on AWS, Azure, and GCP using separate Terraform modules and parallel execution logic. Ideal for organizations looking to implement multi-cloud strategies, compare performance, or improve resilience.
 
+---
+
+## 🔧 Technologies Used
+
+- **Terraform** (v1.6+)
+- **AWS**, **Azure**, **GCP**
