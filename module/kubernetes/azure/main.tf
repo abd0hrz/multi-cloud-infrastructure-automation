@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "kubernetes_rg" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = "centralindia"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "azurerm_virtual_network" "kubernetes_vnet" {
@@ -29,7 +29,7 @@ resource "azurerm_virtual_network" "kubernetes_vnet" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = "centralindia"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "azurerm_subnet" "kubernetes_vnet_bastion_sn_1" {
@@ -93,7 +93,7 @@ resource "azurerm_network_security_group" "kubernetes_bastion_nsg" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = "centralindia"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "azurerm_kubernetes_cluster" "kubernetes_aks_ct" {
@@ -158,6 +158,6 @@ resource "azurerm_kubernetes_cluster" "kubernetes_aks_ct" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = "centralindia"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
