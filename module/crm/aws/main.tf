@@ -24,7 +24,7 @@ resource "aws_iam_role" "crm_iam_ec2_rl" {
     Name = "crm-iam-ec2-rl"
     Environment = var.environment
     Stack = "crm"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_iam_role_policy_attachment" "crm_iam_ec2_rl_plcy_1" {
@@ -40,7 +40,7 @@ resource "aws_iam_instance_profile" "crm_iam_ec2_rl_inst_pf" {
     Name = "crm-iam-ec2-rl-inst-pf"
     Environment = var.environment
     Stack = "crm"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_vpc" "crm_vpc_net" {
@@ -54,7 +54,7 @@ resource "aws_vpc" "crm_vpc_net" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_internet_gateway" "crm_vpc_ig" {
@@ -65,7 +65,7 @@ resource "aws_internet_gateway" "crm_vpc_ig" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table" "crm_vpc_pub_rtt" {
@@ -83,7 +83,7 @@ resource "aws_route_table" "crm_vpc_pub_rtt" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table" "crm_vpc_pvt_rtt" {
@@ -94,7 +94,7 @@ resource "aws_route_table" "crm_vpc_pvt_rtt" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_subnet" "crm_vpc_redis_sn_1" {
@@ -107,7 +107,7 @@ resource "aws_subnet" "crm_vpc_redis_sn_1" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_redis_sn_1_rtt_ass" {
@@ -128,7 +128,7 @@ resource "aws_subnet" "crm_vpc_redis_sn_2" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_redis_sn_2_rtt_ass" {
@@ -149,7 +149,7 @@ resource "aws_subnet" "crm_vpc_app_sn_1" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_app_sn_1_rtt_ass" {
@@ -170,7 +170,7 @@ resource "aws_subnet" "crm_vpc_app_sn_2" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_app_sn_2_rtt_ass" {
@@ -191,7 +191,7 @@ resource "aws_subnet" "crm_vpc_nginx_sn_1" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_nginx_sn_1_rtt_ass" {
@@ -212,7 +212,7 @@ resource "aws_subnet" "crm_vpc_nginx_sn_2" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_nginx_sn_2_rtt_ass" {
@@ -233,7 +233,7 @@ resource "aws_subnet" "crm_vpc_bastion_sn_1" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_bastion_sn_1_rtt_ass" {
@@ -254,7 +254,7 @@ resource "aws_subnet" "crm_vpc_bastion_sn_2" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_bastion_sn_2_rtt_ass" {
@@ -275,7 +275,7 @@ resource "aws_subnet" "crm_vpc_nat_sn_1" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_nat_sn_1_rtt_ass" {
@@ -296,7 +296,7 @@ resource "aws_subnet" "crm_vpc_nat_sn_2" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_nat_sn_2_rtt_ass" {
@@ -317,7 +317,7 @@ resource "aws_subnet" "crm_vpc_loadbalancer_sn_1" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_loadbalancer_sn_1_rtt_ass" {
@@ -338,7 +338,7 @@ resource "aws_subnet" "crm_vpc_loadbalancer_sn_2" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "crm_vpc_loadbalancer_sn_2_rtt_ass" {
@@ -380,7 +380,7 @@ resource "aws_security_group" "crm_vpc_redis_sg" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_security_group" "crm_vpc_app_sg" {
@@ -421,7 +421,7 @@ resource "aws_security_group" "crm_vpc_app_sg" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_security_group" "crm_vpc_nginx_sg" {
@@ -455,7 +455,7 @@ resource "aws_security_group" "crm_vpc_nginx_sg" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_security_group" "crm_vpc_bastion_sg" {
@@ -479,7 +479,7 @@ resource "aws_security_group" "crm_vpc_bastion_sg" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_security_group" "crm_vpc_nat_sg" {
@@ -503,7 +503,7 @@ resource "aws_security_group" "crm_vpc_nat_sg" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_security_group" "crm_vpc_loadbalancer_sg" {
@@ -527,11 +527,11 @@ resource "aws_security_group" "crm_vpc_loadbalancer_sg" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_s3_bucket" "crm_s3_app_stt_bkt" {
-  bucket = "${var.s3_bucket_prefix}-sloopstash-${var.environment}-crm-s3-app-stt-bkt"
+  bucket = "${var.s3_bucket_prefix}-org-${var.environment}-crm-s3-app-stt-bkt"
   acl = "private"
   server_side_encryption_configuration {
     rule {
@@ -548,11 +548,11 @@ resource "aws_s3_bucket" "crm_s3_app_stt_bkt" {
     max_age_seconds = 86400
   }
   tags = {
-    Name = "${var.s3_bucket_prefix}-sloopstash-${var.environment}-crm-s3-app-stt-bkt"
+    Name = "${var.s3_bucket_prefix}-org-${var.environment}-crm-s3-app-stt-bkt"
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_s3_bucket_public_access_block" "crm_s3_app_stt_bkt_pub_acs_blk" {
@@ -622,7 +622,7 @@ resource "aws_cloudfront_distribution" "crm_cloud_front_app_stt_dst" {
     Name = "crm-cloud-front-app-stt-dst"
     Environment = var.environment
     Stack = "crm"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_key_pair" "crm_ec2_key_pair" {
@@ -633,7 +633,7 @@ resource "aws_key_pair" "crm_ec2_key_pair" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_instance" "crm_ec2_bastion_inst_1" {
@@ -674,6 +674,6 @@ resource "aws_instance" "crm_ec2_bastion_inst_1" {
     Environment = var.environment
     Stack = "crm"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
