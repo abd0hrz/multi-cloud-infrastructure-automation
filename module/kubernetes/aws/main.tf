@@ -24,7 +24,7 @@ resource "aws_iam_role" "kubernetes_iam_ec2_rl" {
     Name = "kubernetes-iam-ec2-rl"
     Environment = var.environment
     Stack = "kubernetes"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_iam_role_policy_attachment" "kubernetes_iam_ec2_rl_plcy_1" {
@@ -50,7 +50,7 @@ resource "aws_iam_instance_profile" "kubernetes_iam_ec2_rl_inst_pf" {
     Name = "kubernetes-iam-ec2-rl-inst-pf"
     Environment = var.environment
     Stack = "kubernetes"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_iam_role" "kubernetes_iam_eks_rl" {
@@ -70,7 +70,7 @@ resource "aws_iam_role" "kubernetes_iam_eks_rl" {
     Name = "kubernetes-iam-eks-rl"
     Environment = var.environment
     Stack = "kubernetes"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_iam_role_policy_attachment" "kubernetes_iam_eks_rl_plcy_1" {
@@ -86,7 +86,7 @@ resource "aws_iam_instance_profile" "kubernetes_iam_eks_rl_inst_pf" {
     Name = "kubernetes-iam-eks-rl-inst-pf"
     Environment = var.environment
     Stack = "kubernetes"
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_vpc" "kubernetes_vpc_net" {
@@ -100,7 +100,7 @@ resource "aws_vpc" "kubernetes_vpc_net" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_internet_gateway" "kubernetes_vpc_ig" {
@@ -111,7 +111,7 @@ resource "aws_internet_gateway" "kubernetes_vpc_ig" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table" "kubernetes_vpc_pub_rtt" {
@@ -129,7 +129,7 @@ resource "aws_route_table" "kubernetes_vpc_pub_rtt" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table" "kubernetes_vpc_pvt_rtt" {
@@ -140,7 +140,7 @@ resource "aws_route_table" "kubernetes_vpc_pvt_rtt" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route" "kubernetes_vpc_pvt_rtt_rt_1" {
@@ -162,7 +162,7 @@ resource "aws_subnet" "kubernetes_vpc_bastion_sn_1" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "kubernetes_vpc_bastion_sn_1_rtt_ass" {
@@ -183,7 +183,7 @@ resource "aws_subnet" "kubernetes_vpc_bastion_sn_2" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "kubernetes_vpc_bastion_sn_2_rtt_ass" {
@@ -204,7 +204,7 @@ resource "aws_subnet" "kubernetes_vpc_nat_sn_1" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "kubernetes_vpc_nat_sn_1_rtt_ass" {
@@ -225,7 +225,7 @@ resource "aws_subnet" "kubernetes_vpc_nat_sn_2" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "kubernetes_vpc_nat_sn_2_rtt_ass" {
@@ -246,7 +246,7 @@ resource "aws_subnet" "kubernetes_vpc_loadbalancer_sn_1" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "kubernetes_vpc_loadbalancer_sn_1_rtt_ass" {
@@ -267,7 +267,7 @@ resource "aws_subnet" "kubernetes_vpc_loadbalancer_sn_2" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "kubernetes_vpc_loadbalancer_sn_2_rtt_ass" {
@@ -288,7 +288,7 @@ resource "aws_subnet" "kubernetes_vpc_eks_cp_sn_1" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "kubernetes_vpc_eks_cp_sn_1_rtt_ass" {
@@ -309,7 +309,7 @@ resource "aws_subnet" "kubernetes_vpc_eks_cp_sn_2" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "kubernetes_vpc_eks_cp_sn_2_rtt_ass" {
@@ -330,7 +330,7 @@ resource "aws_subnet" "kubernetes_vpc_eks_nd_sn_1" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "kubernetes_vpc_eks_nd_sn_1_rtt_ass" {
@@ -351,7 +351,7 @@ resource "aws_subnet" "kubernetes_vpc_eks_nd_sn_2" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_route_table_association" "kubernetes_vpc_eks_nd_sn_2_rtt_ass" {
@@ -371,7 +371,7 @@ resource "aws_eip" "kubernetes_vpc_nat_eip" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_nat_gateway" "kubernetes_vpc_ng" {
@@ -387,7 +387,7 @@ resource "aws_nat_gateway" "kubernetes_vpc_ng" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_security_group" "kubernetes_vpc_bastion_sg" {
@@ -411,7 +411,7 @@ resource "aws_security_group" "kubernetes_vpc_bastion_sg" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_security_group" "kubernetes_vpc_nat_sg" {
@@ -435,7 +435,7 @@ resource "aws_security_group" "kubernetes_vpc_nat_sg" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_security_group" "kubernetes_vpc_loadbalancer_sg" {
@@ -459,7 +459,7 @@ resource "aws_security_group" "kubernetes_vpc_loadbalancer_sg" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_security_group" "kubernetes_vpc_eks_sg" {
@@ -492,7 +492,7 @@ resource "aws_security_group" "kubernetes_vpc_eks_sg" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_key_pair" "kubernetes_ec2_key_pair" {
@@ -503,11 +503,11 @@ resource "aws_key_pair" "kubernetes_ec2_key_pair" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_ecr_repository" "kubernetes_ecr_redis_repo" {
-  name = "sloopstash/redis"
+  name = "org/redis"
   image_tag_mutability = "MUTABLE"
   image_scanning_configuration {
     scan_on_push = false
@@ -521,11 +521,11 @@ resource "aws_ecr_repository" "kubernetes_ecr_redis_repo" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_ecr_repository" "kubernetes_ecr_python_repo" {
-  name = "sloopstash/python"
+  name = "org/python"
   image_tag_mutability = "MUTABLE"
   image_scanning_configuration {
     scan_on_push = false
@@ -539,11 +539,11 @@ resource "aws_ecr_repository" "kubernetes_ecr_python_repo" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_ecr_repository" "kubernetes_ecr_nginx_repo" {
-  name = "sloopstash/nginx"
+  name = "org/nginx"
   image_tag_mutability = "MUTABLE"
   image_scanning_configuration {
     scan_on_push = false
@@ -557,7 +557,7 @@ resource "aws_ecr_repository" "kubernetes_ecr_nginx_repo" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_eks_cluster" "kubernetes_eks_ct" {
@@ -610,7 +610,7 @@ resource "aws_eks_cluster" "kubernetes_eks_ct" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
 resource "aws_eks_node_group" "kubernetes_eks_gnr_ng" {
@@ -652,6 +652,6 @@ resource "aws_eks_node_group" "kubernetes_eks_gnr_ng" {
     Environment = var.environment
     Stack = "kubernetes"
     Region = data.aws_region.current.name
-    Organization = "sloopstash"
+    Organization = "org"
   }
 }
